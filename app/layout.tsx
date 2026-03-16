@@ -5,6 +5,7 @@ import DemoBanner from "@/components/DemoBanner";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "The Goods Shed | Restaurant & Farmers Market Canterbury",
   description:
     "The Goods Shed is a farmers market, food hall and restaurant in Canterbury, Kent. Fresh local produce, seasonal menus and a unique dining experience since 2002.",
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="grain">
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body className="antialiased">
         <DemoBanner />
         <Navigation />
