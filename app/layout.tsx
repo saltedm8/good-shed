@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import DemoBanner from "@/components/DemoBanner";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="grain">
       <body className="antialiased">
+        <DemoBanner />
         <Navigation />
         <main>{children}</main>
         <Footer />
